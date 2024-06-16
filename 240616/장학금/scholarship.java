@@ -7,10 +7,10 @@ public class Main {
         int fin = sc.nextInt();
         if (mid >= 90) {
             if (fin >= 95) {
-                System.out.println("10");
+                System.out.println("100000");
             }
             else if (fin >= 90) {
-                System.out.println("5");
+                System.out.println("50000");
             }
             else {
                 System.out.println("0");
