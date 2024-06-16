@@ -13,7 +13,7 @@ public class Main {
             else if (m >= 9 && m < 12) {
                 System.out.println("Fall");
             }
-            else if (m >= 1 && m <= 2 ||  m == 11) {
+            else if (m >= 1 && m <= 2 ||  m == 12) {
                 System.out.println("Winter");
             }
     }
