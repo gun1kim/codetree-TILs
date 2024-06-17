@@ -18,6 +18,9 @@ public class Main {
         if (count >= 2) {
             answer += "E";
         }
+        else {
+            answer += "N";
+        }
 
         System.out.println(answer);
     }
