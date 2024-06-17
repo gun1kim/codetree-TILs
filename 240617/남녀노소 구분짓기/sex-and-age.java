@@ -11,15 +11,15 @@ public class Main {
                 System.out.println("MAN");
             }
             else {
-                System.out.println("WOMAN");
+                System.out.println("BOY");
             }
         }
         else {
             if (age >= 19) {
-                System.out.println("MAN");
+                System.out.println("WOMAN");
             }
             else {
-                System.out.println("WOMAN");
+                System.out.println("GIRL");
             }    
         }      
     }
