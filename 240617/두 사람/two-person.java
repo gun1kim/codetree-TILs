@@ -6,11 +6,12 @@ public class Main {
         String personA = sc.nextLine().trim();
         String personB = sc.nextLine().trim();
 
-        int ageA = Integer.parseInt(personA.substring(0, personA.length() - 1).trim());
-        char genA = personA.charAt(personA.length() - 1);
-        int ageB = Integer.parseInt(personB.substring(0, personB.length() - 1).trim());
-        char genB = personA.charAt(personB.length() - 1);
-        
+        String[] a = personA.split(" ");
+        String[] b = personB.split(" ");
+        int ageA = Integer.parseInt(a[0]);
+        char genA = a[1].charAt(0);
+        int ageB = Integer.parseInt(b[0]);
+        char genB = b[1].charAt(0);
 
         if (isOver19AndMale(ageA, genA) || isOver19AndMale(ageB, genB)) {
             System.out.println("1");
