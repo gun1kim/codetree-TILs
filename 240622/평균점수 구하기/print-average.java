@@ -11,6 +11,6 @@ public class Main {
         }
 
         double avg = sum / 8;
-        System.out.println(avg);
+        System.out.printf("%.1f", avg);
     }
 }
