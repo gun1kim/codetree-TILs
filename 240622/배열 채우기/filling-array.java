@@ -12,6 +12,7 @@ public class Main {
             else {
                 list.add(n);
             }
+            count += 1;
         }
         Collections.reverse(list);
 
