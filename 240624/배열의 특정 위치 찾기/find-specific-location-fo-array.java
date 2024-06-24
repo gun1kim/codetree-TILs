@@ -16,7 +16,7 @@ public class Main {
             sum2 += arr[i];
         }
         double avg = (double) sum2 / 3.0;
-        avg = Math.round(avg);
+        avg = Math.round(avg) * 10.0 / 10.0 ;
 
         System.out.printf("%d %.1f", sum, avg);
     }
