@@ -8,10 +8,15 @@ public class Main {
             arr[i] = sc.nextInt();
         }
         int sum = 0;
+        int sum2 = 0;
         for(int i = 1; i < 10; i+=2) {
             sum += arr[i];
         }   
-        double avg = (double) sum / 5;
+        for(int i = 2; i < 10; i+=3) {
+            sum2 += arr[i];
+        }
+        double avg = (double) sum2 / 3;
+        avg = Math.round(avg);
 
         System.out.printf("%d %.1f", sum, avg);
     }
