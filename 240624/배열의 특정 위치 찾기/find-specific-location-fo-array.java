@@ -15,7 +15,7 @@ public class Main {
         for(int i = 2; i < 10; i+=3) {
             sum2 += arr[i];
         }
-        double avg = (double) sum2 / 3;
+        double avg = (double) sum2 / 3.0;
         avg = Math.round(avg);
 
         System.out.printf("%d %.1f", sum, avg);
