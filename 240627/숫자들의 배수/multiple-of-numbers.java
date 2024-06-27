@@ -8,14 +8,14 @@ public class Main {
         int i = 1;
         while (true) {
             if (count == 2) {
-                System.out.println(n * i);
                 break;
             }
             System.out.print(n * i + " ");
-            i += 1;
             if (n * i % 5 == 0) {
                 count += 1;
             }
+            i += 1;
+            
         }
     }
 }
