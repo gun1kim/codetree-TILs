@@ -8,7 +8,7 @@ public class Main {
         int[] arr = new int[b];
         int result = 0;
 
-        while (a > 0) {
+        while (a > 1) {
             arr[a % b] += 1;
             a /= b;
         }
