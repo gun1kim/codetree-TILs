@@ -13,8 +13,8 @@ public class Main {
             a /= b;
         }
 
-        for (int i = 0; i < b; i++) {
-            result += arr[i] * arr[i];
+        for (int count : arr) {
+            result += count * count;
         }
         System.out.println(result);
     }
