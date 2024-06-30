@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
-        int[] arr = new int[10];
+        int[] arr = new int[b];
         int result = 0;
 
         while (a > 0) {
@@ -13,8 +13,8 @@ public class Main {
             a /= b;
         }
 
-        for (int i = 0; i < 10; i++) {
-            result += Math.pow(arr[i], 2);
+        for (int i = 0; i < b; i++) {
+            result += arr[i] * arr[i];
         }
         System.out.println(result);
     }
