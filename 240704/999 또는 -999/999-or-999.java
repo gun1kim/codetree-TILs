@@ -15,7 +15,7 @@ public class Main {
                 if (n > max) {
                     max = n;
                 }
-                else if (min > n) {
+                if (min > n) {
                     min = n;
                 }
             }
