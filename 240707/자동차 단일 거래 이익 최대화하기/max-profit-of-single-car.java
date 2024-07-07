@@ -18,14 +18,11 @@ public class Main {
                 mn = arr[i];
                 minIndex = i;
             }
-        }
-
-        for (int i = minIndex; i < n; i ++) {
-            if (arr[i] > mx) {
-                mx = arr[i];
+            else if (arr[i] - mn > answer) {
+                answer = arr[i] - mn;
             }
         }
 
-        System.out.println(mx - mn);
+        System.out.println(answer);
     }
 }
