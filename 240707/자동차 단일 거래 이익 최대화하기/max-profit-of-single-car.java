@@ -13,6 +13,11 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
+        if (n == 1) {
+            System.out.println(answer);
+            return;
+        }
+
         for (int i = 0; i < n; i++) {
             if (arr[i] < mn) {
                 mn = arr[i];
