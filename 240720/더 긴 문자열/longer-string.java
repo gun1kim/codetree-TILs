@@ -9,8 +9,11 @@ public class Main {
         if (s1.length() > s2.length()) {
             System.out.println(s1 + " " + s1.length());
         }
-        else {
+        else if (s1.length() < s2.length()) {
             System.out.println(s2 + " " + s2.length());
+        }
+        else {
+            System.out.println("same");
         }
     }
 }
