@@ -9,9 +9,7 @@ public class Main {
         for (int i = 0; i < n; i++) {
             String s = sc.next();
             length += s.length();
-            for (int j = 0; j < s.length(); j++) {
-                if (s.charAt(j) == 'a') count ++;
-            }
+            if (s.charAt(0) == 'a') count ++;
         }
 
         System.out.println(length + " " + count);
