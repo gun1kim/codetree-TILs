@@ -20,6 +20,6 @@ public class Main {
             }
         }
 
-        System.out.println(count + " " + len);
+        System.out.printf("%d %.2f", count, (len / count));
     }
 }
