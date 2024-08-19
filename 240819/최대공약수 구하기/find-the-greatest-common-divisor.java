@@ -10,7 +10,7 @@ public class Main {
     }
 
     private static int gcd(int n, int m) {
-        int num = 0;
+        int num = 1;
         for (int i = 1; i < n; i ++) {
             if (n % i == 0 && m % i == 0) {
                 num = i;
