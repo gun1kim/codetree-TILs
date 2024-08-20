@@ -5,11 +5,13 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
+        sc.close();
 
-        System.out.println(solution(a, b));
+        int sumOfPrimes = calculatePrimeSum(a, b);
+        System.out.println(sumOfPrimes);
     }
 
-    private static int solution(int a, int b) {
+    public static int calculatePrimeSum(int a, int b) {
         int sum = 0;
         for (int i = a; i <= b; i++) {
             if (isPrime(i)) {
@@ -19,10 +21,12 @@ public class Main {
         return sum;
     }
 
-    private static boolean isPrime(int n) {
-        if (n == 1 || n == 2) return false;
-        for (int i = 2; i <= Math.sqrt(n); i++) {
-            if (n % i == 0) {
+    public static boolean isPrime(int num) {
+        if (num < 2) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
                 return false;
             }
         }
