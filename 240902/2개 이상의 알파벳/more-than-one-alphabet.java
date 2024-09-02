@@ -5,24 +5,30 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int[] arr = new int[26];
         String a = sc.next();
-        for (int i = 0 ; i < a.length(); i++) {
-            arr[(int)(a.charAt(i) - 'a')] += 1;
+        
+
+        if (solution(a)) {
+            System.out.println("Yes");
+        }
+        else {
+            System.out.println("No");
+        }
+    }
+
+    private static boolean solution(String a) {
+        int[] count = new int[26];
+
+        for (char c : a.toCharArray()) {
+            count[c - 'a']++;
         }
 
-        boolean flag = true; 
-        for (int i = 0; i < 26; i++) {
-            if (arr[i] > 1) {
-                flag = false;
-                break;
+        int diffCharCount = 0; 
+        for (int c : count) {
+            if (c > 0) {
+                diffCharCount++;
             }
         }
 
-        if (flag) {
-            System.out.println("No");
-        }
-        else {
-            System.out.println("Yes");
-        }
-
+        return diffCharCount >= 2;
     }
 }
