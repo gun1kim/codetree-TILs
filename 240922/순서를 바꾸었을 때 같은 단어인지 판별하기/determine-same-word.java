@@ -14,6 +14,8 @@ public class Main {
         }
 
         String answer = "Yes";
+        if (b.length() > a.length()) answer = "No";
+        
         for (int i = 0; i < 26; i++) {
             if (arr[i] > 0) {
                 answer = "No";
