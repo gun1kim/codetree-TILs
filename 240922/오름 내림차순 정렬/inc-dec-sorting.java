@@ -2,22 +2,24 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+         Scanner sc = new Scanner(System.in);
+        
         int n = sc.nextInt();
-        int[] arr = new int[n];
+        Integer[] arr = new Integer[n]; 
+
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
+
         Arrays.sort(arr);
-        for(int a : arr) {
-            System.out.print(a + " ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
         }
         System.out.println();
-        
-        Integer[] arr2 = Arrays.stream(arr).boxed().toArray(Integer[]::new);
-        Arrays.sort(arr2, Collections.reverseOrder());
-        for(int a : arr) {
-            System.out.print(a + " ");
+
+        Arrays.sort(arr, Collections.reverseOrder());
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
         }
     }
 }
