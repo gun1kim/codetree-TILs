@@ -5,24 +5,23 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String a = sc.next();
         String b = sc.next();
-        int[] arr = new int[26];
-        for (int i = 0; i < a.length(); i++) {
-            arr[(int)(a.charAt(i) - 'a')]++;
-        }
-        for (int i = 0; i < b.length(); i++) {
-            arr[(int)(b.charAt(i) - 'a')]--;
-        }
-
-        String answer = "Yes";
-        if (b.length() > a.length()) answer = "No";
         
-        for (int i = 0; i < 26; i++) {
-            if (arr[i] > 0) {
-                answer = "No";
-                break;
-            }
+        if (a.length() != b.length()) {
+            System.out.print("No");
+            return;
         }
 
-        System.out.print(answer);
+        char[] arr1 = a.toCharArray();
+        char[] arr2 = b.toCharArray();
+
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+
+        if (Arrays.equals(arr1, arr2)) {
+            System.out.print("Yes");
+        }
+        else {
+            System.out.print("No");
+        }
     }
 }
