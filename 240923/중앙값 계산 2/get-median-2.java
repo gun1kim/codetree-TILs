@@ -8,6 +8,7 @@ public class Main {
 
         for (int i = 0; i < n; i++){
             arr.add(sc.nextInt());
+            Collections.sort(arr);
             if ((i + 1) % 2 == 1) {
                 int mid = (i + 1) / 2;
                 System.out.print(arr.get(mid) + " ");
