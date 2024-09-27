@@ -21,12 +21,17 @@ public class Main {
         }
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        Info[] infos = new Info[n];
-
+        List<Info> infos = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            infos[i] = new Info(sc.next(), sc.next(), sc.next());
+            infos.add(new Info(sc.next(), sc.next(), sc.next()));
         }
 
-        infos[n-1].printInfo();
+        Info lastInfo = infos.get(0); 
+         for (int i = 1; i < n; i++) {
+            if (infos.get(i).name.compareTo(lastInfo.name) > 0) {
+                lastInfo = infos.get(i);
+            }
+        }
+        lastInfo.printInfo();
     }
 }
