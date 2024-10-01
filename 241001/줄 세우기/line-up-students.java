@@ -28,12 +28,12 @@ public class Main {
         int n = sc.nextInt();
         Student[] students = new Student[n];
         for (int i = 0; i < n; i++) {
-            students[i] = new Student(sc.nextInt(), sc.nextInt(), i);
+            students[i] = new Student(sc.nextInt(), sc.nextInt(), i+1);
         }
         Arrays.sort(students);
         
         for (int i = 0; i < n; i++) {
-            System.out.println(students[i].h + " " + students[i].w + " " + (int)(students[i].index + 1));
+            System.out.println(students[i].h + " " + students[i].w + " " + students[i].index);
         }
     }
 }
