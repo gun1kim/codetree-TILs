@@ -18,7 +18,7 @@ class Student implements Comparable<Student>{
         if (this.w == s.w) {
             return this.index - s.index;
         }
-        return this.h - s.w;
+        return this.h - s.h;
     }
 
 }
