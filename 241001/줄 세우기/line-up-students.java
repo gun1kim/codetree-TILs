@@ -12,13 +12,15 @@ class Student implements Comparable<Student>{
 
     @Override
     public int compareTo(Student s) {
-        if (this.h == s.h) {
-            return (s.w - this.w);
+        if (this.h != s.h) {
+            return s.h - this.h;
         }
-        if (this.w == s.w) {
+        else if (this.w != s.w) {
+            return s.w - this.w;
+        }
+        else {
             return this.index - s.index;
         }
-        return s.h - this.h;
     }
 
 }
