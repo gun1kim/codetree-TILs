@@ -21,7 +21,7 @@ public class Main {
 
         Arrays.sort(points, (a, b) -> {
             if (Math.abs(a.x + a.y) == Math.abs(b.x + b.y)) {
-                return b.idx - a.idx;
+                return a.idx - b.idx;
             }
             return Math.abs(a.x + a.y) - Math.abs(b.x + b.y);
         });
