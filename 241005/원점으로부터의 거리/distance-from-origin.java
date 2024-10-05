@@ -23,7 +23,7 @@ public class Main {
             if (Math.abs(a.x + a.y) == Math.abs(b.x + b.y)) {
                 return a.idx - b.idx;
             }
-            return Math.abs(a.x + a.y) - Math.abs(b.x + b.y);
+            return (Math.abs(a.x) + Math.abs(a.y)) - (Math.abs(b.x) + Math.abs(b.y));
         });
 
         for (int i = 0; i < n; i++) {
