@@ -2,11 +2,13 @@ import java.util.*;
 class Point {
     int x;
     int y;
+    int d;
     int idx;
 
     public Point(int x, int y, int idx) {
         this.x = x;
         this.y = y;
+        this.d = Math.abs(x) + Math.abs(y);
         this.idx = idx;
     }
 }
@@ -20,10 +22,10 @@ public class Main {
         }
 
         Arrays.sort(points, (a, b) -> {
-            if (Math.abs(a.x + a.y) == Math.abs(b.x + b.y)) {
+            if (a.d == b.d) {
                 return a.idx - b.idx;
             }
-            return (Math.abs(a.x) + Math.abs(a.y)) - (Math.abs(b.x) + Math.abs(b.y));
+            return a.d - b.d;
         });
 
         for (int i = 0; i < n; i++) {
