@@ -20,7 +20,7 @@ public class Main {
             students[i] = new Student(sc.nextInt(), sc.nextInt(), i+1);
         }
 
-        Arrays.sort(students, (a, b) -> a.h == b.h ? a.w - b.w : a.h - b.h);
+        Arrays.sort(students, (a, b) -> a.h == b.h ? b.w - a.w : a.h - b.h);
 
         for (int i = 0; i < n; i++) {
             System.out.println(students[i].h + " " + students[i].w + " " + students[i].idx);
