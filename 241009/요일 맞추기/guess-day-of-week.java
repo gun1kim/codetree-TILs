@@ -22,7 +22,7 @@ public class Main {
         tot2 += d2;
 
         int diff = tot2 - tot1;
-
-        System.out.print(days[(diff % 7 + 1) % 7]) ;
+        int idx = (diff % 7 + 1) % 7;
+        System.out.print(days[idx]);
     }
 }
