@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[] check = new int[2001];
-        int cur = 100;
+        int cur = 1000;
         for(int i = 0; i < n; i++) {
             int x = sc.nextInt();
             char d = sc.next().charAt(0);
