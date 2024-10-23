@@ -9,16 +9,16 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        int answer = 0;
-        int cnt = 0;
+        int answer = 1;
+        int cnt = 1;
 
-        for (int i = 0; i < n-1; i++) {
-            if (arr[i] * arr[i+1] > 0) {
+        for (int i = 1; i < n-1; i++) {
+            if (arr[i-1] * arr[i] > 0) {
                 cnt += 1;
                 answer = Math.max(answer, cnt);
             }
             else {
-                cnt = 0;
+                cnt = 1;
             }
         }
         System.out.print(answer);
