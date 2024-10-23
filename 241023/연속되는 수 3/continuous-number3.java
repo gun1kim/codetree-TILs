@@ -10,15 +10,15 @@ public class Main {
         }
 
         int answer = 0;
-        int cnt = 1;
+        int cnt = 0;
 
-        for (int i = 1; i < n; i++) {
-            if (arr[i-1] * arr[i] > 0) {
+        for (int i = 0; i < n-1; i++) {
+            if (arr[i] * arr[i+1] > 0) {
                 cnt += 1;
                 answer = Math.max(answer, cnt);
             }
             else {
-                cnt = 1;
+                cnt = 0;
             }
         }
         System.out.print(answer);
