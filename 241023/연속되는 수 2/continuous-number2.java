@@ -13,8 +13,11 @@ public class Main {
         for (int i = 1; i < n; i++) {
             if (arr[i-1] == arr[i]) {
                 cnt += 1;
+                answer = Math.max(answer, cnt);
             } 
-            answer = Math.max(answer, cnt);
+            else {
+                cnt = 1;
+            }
         }
         System.out.print(answer);
     }
