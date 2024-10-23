@@ -12,7 +12,7 @@ public class Main {
         int answer = 1;
         int cnt = 1;
 
-        for (int i = 1; i < n-1; i++) {
+        for (int i = 1; i < n; i++) {
             if (arr[i-1] * arr[i] > 0) {
                 cnt += 1;
                 answer = Math.max(answer, cnt);
