@@ -52,11 +52,11 @@ public class Main {
         for (int i = 0; i < 2000001; i++) {
             if (a[i] == b[i] && a[i] != 0 && b[i] != 0) {
                 answer = a[i];
-                break;
+                System.out.print(answer);
+                return;
             }
         }
+        System.out.print(-1);
 
-        if (answer == 0) answer = -1;
-        System.out.print(answer);
     }
 }
