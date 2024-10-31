@@ -10,7 +10,7 @@ public class Main {
         String s = sc.next();
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == 'L') {
-                dir = (dir - 1) % 4;
+                dir = (dir + 3) % 4;
             }
             else if (s.charAt(i) == 'R') {
                 dir = (dir + 1) % 4;
