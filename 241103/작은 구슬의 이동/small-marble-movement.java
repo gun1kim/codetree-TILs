@@ -20,11 +20,11 @@ public class Main {
             dy = 1;
         }
         else if (d == 'U') {
-            dx = 1;
+            dx = -1;
             dy = 0;
         }
         else if (d == 'D') {
-            dx = -1; 
+            dx = 1; 
             dy = 0;
         }
 
