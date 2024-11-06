@@ -27,7 +27,7 @@ public class Main {
             }
 
             else if (c == 'L') {
-                dir = (dir - 1) % 4;
+                dir = (dir + 3) % 4;
                 time += 1;
             }
         }
