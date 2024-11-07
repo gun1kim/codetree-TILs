@@ -41,9 +41,6 @@ public class Main {
 
         int answer = 0;
         while (x >= 0 && x < n && y >= 0 && y < n) {
-            if (x < 0 || x >= n || y < 0 || y >= n) {
-                break;
-            }
             if (arr[x][y] == '/') {
                 dir = (1 - dir);
             }
@@ -51,9 +48,13 @@ public class Main {
                 dir = (3 - dir);
             }
             answer += 1;
+            int nx = x + dx[dir];
+            int ny = y + dy[dir];
+            if (nx < 0 && nx >= n && ny < 0 && ny >= n) 
+                break;
+            x = nx;
+            y = ny;
 
-            x += dx[dir];
-            y += dy[dir];
             
             
         }
