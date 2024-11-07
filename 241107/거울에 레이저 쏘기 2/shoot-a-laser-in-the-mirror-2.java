@@ -41,6 +41,9 @@ public class Main {
 
         int answer = 0;
         while (x >= 0 && x < n && y >= 0 && y < n) {
+            if (x < 0 || x >= n || y < 0 || y >= n) {
+                break;
+            }
             if (arr[x][y] == '/') {
                 dir = (1 - dir);
             }
@@ -52,9 +55,7 @@ public class Main {
             x += dx[dir];
             y += dy[dir];
             
-            if (x < 0 || x >= n || y < 0 || y >= n) {
-                break;
-            }
+            
         }
         
         System.out.print(answer);
