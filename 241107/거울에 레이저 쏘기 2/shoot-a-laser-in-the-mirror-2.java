@@ -51,6 +51,10 @@ public class Main {
 
             x += dx[dir];
             y += dy[dir];
+            
+            if (x < 0 || x >= n || y < 0 || y >= n) {
+                break;
+            }
         }
         
         System.out.print(answer);
