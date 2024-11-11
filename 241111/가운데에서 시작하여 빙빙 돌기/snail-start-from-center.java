@@ -15,7 +15,7 @@ public class Main {
             num ++;
             int nx = x + dx[dir];
             int ny = y + dy[dir];
-            if (nx < 0 || nx >= n || ny < 0 || ny >= n) {
+            if (nx < 0 || nx >= n || ny < 0 || ny >= n || arr[nx][ny] != 0) {
                 dir = (dir + 1) % 4;
                 nx = x + dx[dir];
                 ny = y + dy[dir];
