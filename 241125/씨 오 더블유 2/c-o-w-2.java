@@ -5,22 +5,18 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         String s = sc.next();
-        int countC = 0;
-        int countCO = 0;
-        int countCOW = 0;
+        int answer = 0; 
 
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == 'C') {
-                countC += 1;
-            }
-            else if (s.charAt(i) == 'O') {
-                countCO += countC;
-            }
-            else if (s.charAt(i) == 'W') {
-                countCOW += countCO;
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                for (int k = j + 1; k < n; k++) {
+                    if (s.charAt(i) == 'C' && s.charAt(j) == 'O' && s.charAt(k) == 'W') {
+                        answer += 1;
+                    }
+                }
             }
         }
 
-        System.out.print(countCOW);
+        System.out.print(answer);
     }
 }
