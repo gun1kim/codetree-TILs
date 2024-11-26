@@ -40,7 +40,7 @@ public class Main {
                         curY = ny;
                     }
                     if (count == 5) {
-                        Systme.out.println(arr[i][j]);
+                        System.out.println(arr[i][j]);
                         System.out.print((i + 2 * dx[k] + 1) + " " + (j + 2  * dy[k] + 1));
                         System.exit(0); 
                     }
