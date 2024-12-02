@@ -14,8 +14,8 @@ public class Main {
         int answer = Integer.MIN_VALUE;
 
         for (int i = 0; i < n - k; i++) {
-            int sum = arr[i];
-            for (int j = i + 1; j < i + k; j++) {
+            int sum = 0;
+            for (int j = i; j < i + k; j++) {
                 sum += arr[j];
             }
             answer = Math.max(answer, sum);
