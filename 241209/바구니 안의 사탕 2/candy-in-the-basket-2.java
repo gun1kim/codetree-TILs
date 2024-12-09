@@ -10,7 +10,7 @@ public class Main {
         for (int i = 0; i < n; i++) {
             int c = sc.nextInt();
             int p = sc.nextInt();
-            arr[p] = c;
+            arr[p] += c;
         }
 
         int answer = 0;
