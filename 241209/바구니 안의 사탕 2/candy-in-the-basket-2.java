@@ -13,27 +13,19 @@ public class Main {
             arr[p] = c;
         }
 
-        int max = 0;
-        int currentSum = 0;
+        int answer = 0;
+        for (int c = 0; c <= 100; c++) {
+            int sum = 0;
+            int left = Math.max(0, c - k);
+            int right = Math.min(c + k, 100);
 
-        for (int i = 0; i <= k && i <= 100; i++) {
-            currentSum += arr[i];
+            for (int i = left; i <= right; i++) {
+                sum += arr[i];
+            }
+            
+            answer = Math.max(answer, sum);
         }
 
-        max = currentSum;
-        for (int c = 1; c <= 100; c++) {
-            if (c - k - 1 >= 0) {
-                currentSum -= arr[c - k -1];
-            }
-
-            if (c + k <= 100) {
-                currentSum += arr[c + k];
-            }
-
-            max = Math.max(max, currentSum);
-        }
-
-        System.out.print(max);
-
+        System.out.print(answer);
     }
 }
