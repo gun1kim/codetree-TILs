@@ -8,13 +8,13 @@ public class Main {
         int b = sc.nextInt();
         int c = sc.nextInt();
 
-        int answer = n * n * n;
+        int answer = 0;
 
-        for (int i = 1; i <= a; i++) {
-            for (int j = 1; j <= b; j++) {
-                for (int k = 1; k <= c; k++){
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                for (int k = 1; k <= n; k++){
                     if (Math.abs(i - a) <= 2 || Math.abs(j - b) <= 2 || Math.abs(k - c) <= 2) {
-                        answer -= 1;
+                        answer += 1;
                     }
                 }
             }
