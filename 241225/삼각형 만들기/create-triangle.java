@@ -20,7 +20,7 @@ public class Main {
                 for (int k = 0; k < n; k++) {
                     if (i != j && j != k && i != k) {
                         int x1 = arr[i][0], y1 = arr[i][1];
-                        int x2 = arr[j][0], y2 = arr[i][1];
+                        int x2 = arr[j][0], y2 = arr[j][1];
                         int x3 = arr[k][0], y3 = arr[k][1];
 
                         boolean isXParallel = (y1 == y2 || y2 == y3 || y1 == y3);
