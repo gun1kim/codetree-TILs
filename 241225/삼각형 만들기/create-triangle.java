@@ -26,12 +26,7 @@ public class Main {
                         boolean isXParallel = (y1 == y2 || y2 == y3 || y1 == y3);
                         boolean isYParallel = (x1 == x2 || x2 == x3 || x1 == x3);
 
-                        int maxX = Math.max(Math.max(x1,x2),x3);
-                        int minX = Math.min(Math.min(x1,x2),x3);
-                        int maxY = Math.max(Math.max(y1,y2),y3);
-                        int minY = Math.min(Math.min(y1,y2),y3);
-
-                        int area = (maxX - minX) * (maxY - minY);
+                        int area = Math.abs(((x1 * y2) + (x2 * y3) + (x3 * y1)) - ((x2 * y1) + (x3 * y2) + (x1 * y3)));
                         answer = Math.max(answer, area);
                     }
                 }
