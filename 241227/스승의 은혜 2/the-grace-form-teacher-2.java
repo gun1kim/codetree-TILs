@@ -11,6 +11,8 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
+        Arrays.sort(arr);
+
         int answer = 0;
         for (int i = 0; i < n; i++) {
             int sum = 0;
