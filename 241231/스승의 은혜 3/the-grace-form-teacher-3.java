@@ -15,7 +15,7 @@ public class Main {
             arr[i][1] = s;
         }
 
-        Arrays.sort(arr, (a, b1) -> (a[0] + a[1]) - (b1[0] + b1[1]));
+        Arrays.sort(arr, Comparator.comparingInt(a -> a[0]));
         int answer = 0; 
 
 
