@@ -20,17 +20,26 @@ public class Main {
 
 
         for (int i = 0; i < n; i++) {
-            int sum = 0;
-            int count = 0;
+            int[] costs = new int[n];
             for (int j = 0; j < n; j++) {
-                int price = (i == j) ? arr[j][0] / 2 : arr[j][0];
-                price += arr[j][1];
-                if (sum + price <= b) {
-                    sum += price;
-                    count++;
+                if (i == j) {
+                    costs[j] =  arr[j][0] / 2 + arr[j][1];
                 }
                 else {
-                    break;
+                    costs[j] = arr[j][0] + arr[j][1];
+                }
+            }
+                
+            Arrays.sort(costs);
+
+            int sum = 0, count = 0;
+            for (int cost : costs) {
+               if (sum + cost <= b) {
+                    sum += cost;
+                   count++;
+                } 
+                else {
+                   break;
                 }
             }
             answer = Math.max(answer, count);
