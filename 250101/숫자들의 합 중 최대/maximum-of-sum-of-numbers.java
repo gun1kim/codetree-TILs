@@ -9,10 +9,11 @@ public class Main {
         int answer = 0;
         
         for (int i = x; i <= y; i++) {
-            int temp;
-            while (i > 0) {
-                temp += i % 10;
-                i /= 10;
+            int temp = 0;
+            int num = i;
+            while (num > 0) {
+                temp += num % 10;
+                num /= 10;
             }
 
             answer = Math.max(answer, temp);
