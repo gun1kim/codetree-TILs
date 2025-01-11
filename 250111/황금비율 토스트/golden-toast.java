@@ -33,8 +33,10 @@ public class Main {
                 }
             }
             else if (c == 'D') {
-                it.next();
-                it.remove();
+                while (it.hasNext()) {
+                    it.next();
+                    it.remove();
+                }
             }
         }
 
